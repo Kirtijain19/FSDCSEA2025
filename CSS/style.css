@@ -1,0 +1,44 @@
+/* h1,h2,h3{
+    background-color: brown;
+    color: white;
+}
+#heading1{
+    color: blue;
+} */
+
+
+/* descendent */
+/* div p{   
+    background-color: cadetblue;
+    color: blue;
+} */
+
+ /* child */
+/* div>p{   
+    background-color: cadetblue;
+    color: blue;
+} */
+
+/* immediate sibling */
+/* div+p{   
+    background-color: cadetblue;
+    color: blue;
+} */
+
+
+/* all siblings in forward direction */
+/* div~p{   
+    background-color: cadetblue;
+    color: blue;
+} */
+
+/* all siblings in forward direction */
+p:nth-child(1){   
+    background-color: cadetblue;
+    color: blue;
+}
+
+div p:nth-of-type(1){
+    background-color: burlywood;
+    color: black;
+}
