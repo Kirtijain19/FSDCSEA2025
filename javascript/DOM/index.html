@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 15px;
+            width: 320px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 6px;
+            text-align: left;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        button {
+            background: #4e89ff;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            width: 100%;
+            /* animation-name: pulse;
+            animation-duration: 2s;
+            animation-iteration-count: infinite; */
+        }
+        button:hover{
+            background-color: brown;
+        }
+
+        #data {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f4f8ff;
+            border-radius: 8px;
+            font-size: 14px;
+            text-align: left;
+        }
+        @keyframes pulse{
+            0%{
+                
+                background-color: #74ebd5;
+            }
+            50%{
+                background-color:bisque;
+            }
+            100%{
+                background-color: chocolate;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+
+        <form action="">
+            <label for="">Enter name</label><input type="text" id="myName">
+            <br>
+            <label for="">Enter branch</label><input type="text" id="branch">
+            <br>
+            <label for="">Enter roll number</label><input type="number" id="roll">
+            <br>
+            <button type="button" onclick="display()">Display</button>
+        </form>
+        <div id="data"></div>
+    </div>
+    <script>
+        function display() {
+            // alert('hiii')
+            const myName = document.getElementById('myName').value
+            const myBranch = document.getElementById('branch').value
+            const myRoll = document.getElementById('roll').value
+            // alert("hello "+myName)
+            document.getElementById('data').innerHTML = `name is ${myName}, branch is ${myBranch}, roll number is ${myRoll}`
+        }
+    </script>
+</body>
+
+</html>
